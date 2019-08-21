@@ -3,7 +3,7 @@
 n = 1000
 x = rnorm(n)
 y = rnorm(n)
-png(filename = "Normal Distribution", bg = NA)
+png(filename = "Normal Distribution.png", bg = NA)
 plot(x, y, pch = ".", col = "blue", main = "Normal")
 dev.off()
 
@@ -12,7 +12,7 @@ dev.off()
 n = 1000
 x = runif(n)
 y = runif(n)
-png(filename = "Uniform Distribution", bg = NA)
+png(filename = "Uniform Distribution.png", bg = NA)
 plot(x, y, pch = ".", col = "blue", main = "Uniform")
 dev.off()
 
@@ -22,7 +22,7 @@ n = 1000
 x = runif(n, 0, 10)
 b = rnorm(n, 1, 2)
 y = x + b
-png(filename = "Linear Distribution", bg = NA)
+png(filename = "Linear Distribution.png", bg = NA)
 plot(x, y, pch = ".", col = "blue", main = "Linear")
 dev.off()
 
@@ -35,7 +35,7 @@ sigma2 = n^1.3
 eps = rnorm(n, mean = 0, sd = sqrt(sigma2))
 y = a + b*n + 3*eps
 mod <- lm(y ~ n)
-png(filename = "Heteroscedastic Distribution", bg = NA)
+png(filename = "Heteroscedastic Distribution.png", bg = NA)
 plot(n, y, pch = ".", col = "blue", main = "Heteroscedastic")
 dev.off()
 
@@ -51,7 +51,7 @@ b = 1
 c = -100
 
 y1 = a*x1^2 + b*x2 + c
-png(filename = "Parable", bg = NA)
+png(filename = "Parable.png", bg = NA)
 plot(x1, y1, pch = ".", col = "blue", main = "Parabola")
 dev.off()
 
@@ -61,7 +61,7 @@ set.seed(1)
 n = 1000
 x1 = rnorm(n, -1, 0.1)
 y1 = rnorm(n, -1, 0.1)
-png(filename = "Clumps", bg = NA)
+png(filename = "Clumps.png", bg = NA)
 plot(x1, y1, pch = ".", xlim = c(-2, 2), ylim = c(-2, 2), col = "blue",
      main = "Clumps")
 
@@ -82,7 +82,7 @@ set.seed(1)
 n = 1000
 Y1 = rnorm(n,0, 0.1)
 Y2 = rnorm(n,0, 0.1)
-png(filename = "Eye Distribution", bg = NA)
+png(filename = "Eye Distribution.png", bg = NA)
 plot(Y1,Y2, pch = ".",ylim=c(-6,6),xlim=c(-6,6), col = "blue", main = "Eye")
 rhovec  = c(0)  # direction
 dvec    = c(4)           # radius
@@ -103,7 +103,7 @@ dev.off()
 # AR(1) Process Distribution ----------------------------------------------
 
 n = arima.sim(list(order=c(1,0,0), ar=.5), n= 200) + 10
-png(filename = "AR(1) Process", bg = NA)
+png(filename = "AR(1) Process.png", bg = NA)
 plot(n, pch = ".", col = "blue", main = "AR(1) process")
 dev.off()
 
@@ -112,7 +112,7 @@ dev.off()
 n = 10000
 x = rnorm(n)
 y = sin(x)
-png(filename = "Sinus Curve", bg = NA)
+png(filename = "Sinus Curve.png", bg = NA)
 plot(x, y, pch = ".", xlab = "x", ylab = "y", col = "blue", main = "Sinus curve")
 dev.off()
 
@@ -125,7 +125,7 @@ sigma2 = n^1.3
 eps = rnorm(n, mean = 0, sd = sqrt(sigma2))
 y = a + b*n + 2*eps
 mod <- lm(y ~ n)
-png(filename = "Integers", bg = NA)
+png(filename = "Integers.png", bg = NA)
 plot(n, y, pch = ".", xlab = "x", ylab = "y", col = "blue",
      xlim = c(0,20), ylim = c(0,20), main = "Integers")
 dev.off()
