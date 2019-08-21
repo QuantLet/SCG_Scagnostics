@@ -4,30 +4,34 @@
 install.packages("rJava")
 install.packages("scagnostics")
 install.packages("psych")
+install.packages("MASS")
+
 
 # Library -----------------------------------------------------------------
 
 library(scagnostics)
 library(psych)
+library(MASS)
+
 
 
 # Calculating the scagnostics  --------------------------------------------
 
-scagnostics(boston)
-s = scagnostics(boston)
+scagnostics(Boston)
+s = scagnostics(Boston)
 o = scagnosticsOutliers(s)
 o[o]
 g = scagnosticsGrid(s)
 go = g[o,]
-plot(boston[go$x])
+plot(Boston[go$x])
 
 e = scagnosticsExemplars(s)
 e[e]
 ge = g[e,]
 par(mfrow = c(2,2))
 for (i in 1:dim(ge)[1])
-  plot(boston[[ge$x[i]]], boston[[ge$y[i]]], pch=".",
-       xlab=names(boston)[ge$x[i]], ylab=names(boston)[ge$y[i]])
+  plot(Boston[[ge$x[i]]], Boston[[ge$y[i]]], pch=".",
+       xlab=names(Boston)[ge$x[i]], ylab=names(Boston)[ge$y[i]])
 
 
 # Plotting the SPLOM  -----------------------------------------------------
