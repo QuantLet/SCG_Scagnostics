@@ -57,17 +57,3 @@ pairs(s1, pch = ".", col = "blue",main = "Scagnostics of Boston Housing Dataset"
 dev.off()
 
 
-# Example with PC Factors ------------------------------------------------
-
-png(filename = "SPLOM BHD.png", bg = NA)
-pairs(factors_scag_gr, pch = ".", col = "green",
-      main = "Scatterplot matrix (SPLOM) of PC Factors")
-dev.off()
-
-scagnostics(factors_scag_gr)
-s = scagnostics(factors_scag_gr)
-s1 = as.matrix(t(s))
-
-png(filename = "Scagnostics SPLOM PC Factors.png")
-pairs(s1, pch = ".", col = "green", main = "Scagnostics of PC Factors")
-dev.off()
