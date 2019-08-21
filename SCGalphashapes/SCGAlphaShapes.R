@@ -15,7 +15,7 @@ library(alphahull)
 x1 = 0
 y1 = 2
 
-png(filename = "Alpha Shape 1",bg = NA)
+png(filename = "Alpha Shape 1.png",bg = NA)
 plot(x1, y1, pch = 19, col = "blue", xlab = "x", ylab = "y",
      xlim = c(-1, 5), ylim = c(0, 4))
 
@@ -60,7 +60,7 @@ alpha = 0
 ashape.obj = ashape(x, alpha = alpha)
 # Plot alpha-shape in blue, sample points in black,
 # and Delaunay triangulation in red
-png(filename = "Alpha Shape II - 0",bg = NA)
+png(filename = "Alpha Shape II - 0.png",bg = NA)
 plot(ashape.obj, col = c(4, 1, 2), pch = 19)
 
 n = 100
@@ -86,7 +86,7 @@ alpha = 1
 ashape.obj = ashape(x, alpha = alpha)
 # Plot alpha-shape in blue, sample points in black,
 # and Delaunay triangulation in red
-png(filename = "Alpha Shape II - 1",bg = NA)
+png(filename = "Alpha Shape II - 1.png",bg = NA)
 plot(ashape.obj, col = c(4, 1, 2), pch = 19)
 
 n = 100
@@ -115,7 +115,7 @@ ashape.obj = ashape(x, alpha = alpha)
 
 # Plot alpha-shape in blue, sample points in black,
 # and Delaunay triangulation in red
-png(filename = "Alpha Shape II - w ",bg = NA)
+png(filename = "Alpha Shape II - w.png",bg = NA)
 plot(ashape.obj, col = c(4, 1, 2), pch = 19)
 
 n = 100
