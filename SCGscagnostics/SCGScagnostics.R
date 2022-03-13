@@ -36,7 +36,7 @@ for (i in 1:dim(ge)[1])
 
 # Plotting the SPLOM  -----------------------------------------------------
 
-pairs(boston)
+pairs(Boston)
 
 png(filename = "SPLOM BHD.png", bg = NA)
 pairs(boston, pch = ".", col = "blue",
